@@ -7,8 +7,8 @@ function validateForm(){
 		alert ("Digite el usuario");
 		return false ;
 	}
-	if (!/^[a-z A-Z]*$/g.test (document.getElementById('name').value)){
-		alert ("Caracteres invalidos");
+	if (!(/^[A-Z][a-zA-Z]*$/g.test (document.getElementById('name').value))){
+		alert ("Caracteres invalidos o la primera letra  no es mayúscula");
 		return false;
 	}
 
@@ -17,8 +17,9 @@ function validateForm(){
 		alert ("Digite su apellido");
 		return false ;
 	}
-	if (!/^[a-z A-Z]*$/g.test (document.getElementById('lastname').value)){
-		alert ("Caracteres invalidos");
+
+	if (!(/^[A-Z][a-zA-Z]*$/g.test(document.getElementById('lastname').value))){
+		alert ("Caracteres invalidos o la primera letra no es mayuscula");
 		return false;
 	}
 
@@ -32,7 +33,7 @@ function validateForm(){
 			alert("Contraseña al menos de 6 caracteres");
 		}else if(contra == "123456" || contra =="password" || contra == "098754"){
 			alert("Por favor escriba otra contraseña");
-		}c
+		}
 	if (document.getElementsByTagName("select")[0].value == 0){
 		alert("Selecciona tu tipo de bici");
 	}
